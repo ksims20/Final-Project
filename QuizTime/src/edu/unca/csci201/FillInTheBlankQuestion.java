@@ -1,15 +1,20 @@
 package edu.unca.csci201;
 
+import java.util.Scanner;
+
 public class FillInTheBlankQuestion implements Question {
 
-	private String Answer;
+	private Answer Answer;
 	private String Question;
 	private Answer CorrectAnswer;
+	private Answer[] PossibleAnswers;
+	Scanner scan = new Scanner(System.in);
 	
 	
-	public FillInTheBlankQuestion(String Answer, String Question, Answer CorrectAnswer) {
-		this.Answer = Answer;
+	public FillInTheBlankQuestion(String Question, Answer[] PossibleAnswers, Answer Answer) {
 		this.Question = Question;
+		this.PossibleAnswers = PossibleAnswers;
+		this.Answer = Answer;
 	}
 
 	@Override
